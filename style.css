@@ -17,15 +17,17 @@ body {
 .navbar {
   display: flex;
   justify-content: space-around;
-  margin: auto;
   padding: 10px;
   background-color: #333;
+  border-radius: 45px;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
   padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
@@ -33,31 +35,31 @@ body {
   border-radius: 5px;
 }
 
-/* Headings */
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #333;
   text-align: center;
   margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #555;
   margin: 0.5em 0;
 }
 
 h3 {
+  font-size: 1.5em;
   color: #666;
   margin-top: 1em;
 }
 
-/* Profile Section */
 .profile-section {
   display: flex;
   gap: 20px;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .profile-section img {
@@ -70,7 +72,6 @@ h3 {
   flex: 1;
 }
 
-/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -93,7 +94,6 @@ td {
   background-color: #fff;
 }
 
-/* Background for Pendidikan and Experience Sections */
 #education,
 #experience {
   background-color: #f9f9f9;
@@ -102,7 +102,16 @@ td {
   margin-top: 15px;
 }
 
-/* Links */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
 a {
   color: #0073e6;
   text-decoration: none;
@@ -110,4 +119,15 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
